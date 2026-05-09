@@ -12,6 +12,8 @@ export default function Sidebar() {
         { href: '/dashboard',   label: 'Dashboard',   icon: '📊' },
         { href: '/roles',       label: 'Roles',       icon: '🔑' },
         { href: '/permissions', label: 'Permissions', icon: '🛡️' },
+        { href: '/modules', label: 'Modules', icon: '📊' },
+
     ];
 
     return (

@@ -3,8 +3,10 @@
 import AuthGuard from '@/components/AuthGuard';
 import { roleService, Role } from '@/services/roleService';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function RolesPage() {
+    const router                = useRouter();
     const [roles, setRoles]         = useState<Role[]>([]);
     const [loading, setLoading]     = useState(true);
     const [error, setError]         = useState('');
@@ -164,7 +166,13 @@ export default function RolesPage() {
                                             }
                                         </td>
                                         <td>
-                                            <button className="btn btn-sm btn-outline-primary me-2">
+                                            {/* <button className="btn btn-sm btn-outline-primary me-2">
+                                                ✏️ Edit
+                                            </button> */}
+                                            <button
+                                                className="btn btn-sm btn-outline-primary me-2"
+                                                onClick={() => router.push(`/roles/edit/${role.id}`)}
+                                            >
                                                 ✏️ Edit
                                             </button>
                                             <button

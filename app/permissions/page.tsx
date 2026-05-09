@@ -1,7 +1,7 @@
 'use client';
 
 import AuthGuard from '@/components/AuthGuard';
-import { permissionService, Permission } from '@/services/permissionService';
+import { permissionService, Permission } from '@/services/permissionServices';
 import { useState, useEffect } from 'react';
 
 export default function PermissionsPage() {
@@ -152,7 +152,7 @@ export default function PermissionsPage() {
                                         </td>
                                         <td>
                                             <span className="badge bg-warning text-dark">
-                                                roles
+                                                {permission.id}
                                             </span>
                                         </td>
                                         <td>
@@ -177,7 +177,7 @@ export default function PermissionsPage() {
                             </tbody>
                         </table>
                     )}
-                    
+
                 </div>
 
                 {/* Table Footer */}
